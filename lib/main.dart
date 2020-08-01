@@ -61,7 +61,7 @@ Widget _buildBody(BuildContext context) {
        child: ListTile(
          title: Text(record.name),
          trailing: Text(record.votes.toString()),
-         onTap: () => record.reference.updateData({'votes': record.votes + 1}),
+         onTap: () => record.reference.updateData({'votes': FieldValue.increment(1)}),
        ),
      ),
    );
